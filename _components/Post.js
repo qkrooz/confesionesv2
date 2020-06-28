@@ -94,7 +94,7 @@ const Post = ({ number, hasImage }) => {
                 onPress={() => { navigation.navigate("standalonepost") }}
             >
                 <View style={styles.textContainer}>
-                    <Text style={{ textAlign: 'center', color: textColor, fontSize: 16 }}>asdflkjngskjhghfcahjflcgnmlhagfcasbnkcjfaghcjfasb,h fceab ,cbashcfba ,mhcbmh,fba,fbkmanbfh as,ncjfasxmngfvsxfvnhgjasvfxkjgasvn fgavsngjkxfvnasjhxvsajkhgxvnkhgadsnxjasnhdxkjahsngfxakjhngfhasxnvfkjghaskxnfkjhasgdkxfhasvgfjknsajkgfasfasd</Text>
+                    <Text style={{ textAlign: 'center', color: textColor, fontSize: 16 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in efficitur eros. Suspendisse tempus sed ipsum ut accumsan. Vivamus sit amet libero molestie, lobortis felis vel, congue metus. Integer vitae tempor risus. Nam sit amet augue ut gravida. </Text>
                 </View>
             </TouchableWithoutFeedback>
             {/* Card Text Container ends */}
