@@ -2,18 +2,26 @@ import React from 'react';
 // React Navigation
 import { createStackNavigator } from '@react-navigation/stack';
 // Components
-import Home from '../_screens/Home';
+import Notifications from '../_screens/Notifications';
 import StandalonePost from '../_screens/StandalonePost';
-// Others
 const Stack = createStackNavigator();
-const HomeStack = () => {
+const NotificationStack = () => {
     return (
         <Stack.Navigator
             initialRouteName='home'>
             <Stack.Screen
-                name="home"
-                component={Home}
-                options={{ headerShown: false }} />
+                component={Notifications}
+                name="notifications"
+                options={{
+                    title: 'Tus Publicaciones',
+                    headerStyle: {
+                        height: 60
+                    },
+                    headerTitleStyle: {
+                        paddingTop: 16
+                    }
+                }}
+            />
             <Stack.Screen
                 name="standalonepost"
                 component={StandalonePost}
@@ -38,4 +46,4 @@ const HomeStack = () => {
         </Stack.Navigator>
     );
 }
-export default HomeStack;
+export default NotificationStack;

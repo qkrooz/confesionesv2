@@ -6,8 +6,8 @@ import { View } from 'react-native'
 import 'react-native-gesture-handler';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Screens
-import HomeStack from '../_navigation/HomeStack';
-import Notifications from '../_screens/Notifications';
+import HomeStack from './HomeStack';
+import NotificationsStack from './NotificationsStack';
 import Messages from '../_screens/Messages';
 import User from '../_screens/User';
 // Other components
@@ -39,7 +39,7 @@ const TabNavigator = () => {
                     title: '',
                     tabBarIcon: ({ color }) => (<Icon name='home' size={24} color={color} />)
                 }} />
-                <Tab.Screen name="notifications" component={Notifications} options={{
+                <Tab.Screen name="notifications" component={NotificationsStack} options={{
                     title: '',
                     tabBarIcon: ({ color }) => (<Icon name='bell' size={24} color={color} />)
                 }} />
