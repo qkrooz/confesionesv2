@@ -8,7 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Screens
 import HomeStack from './HomeStack';
 import NotificationsStack from './NotificationsStack';
-import Messages from '../_screens/Messages';
+import MessagesStack from './MessagesStack';
 import User from '../_screens/User';
 // Other components
 import Icon from 'react-native-vector-icons/Feather';
@@ -57,7 +57,7 @@ const TabNavigator = () => {
                                 navigation.navigate('newpost')
                             }
                         })} />
-                <Tab.Screen name="messages" component={Messages} options={{
+                <Tab.Screen name="messages" component={MessagesStack} options={{
                     title: '',
                     tabBarIcon: ({ color }) => (<Icon name='message-circle' size={24} color={color} />)
                 }} />
