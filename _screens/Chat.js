@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, View, StyleSheet, TouchableWithoutFeedback, Image, TextInput } from 'react-native'
 // Other
-import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/Feather';
 import UserPic from '../resources/img/Flamita.png';
 import { LinearTextGradient } from "react-native-text-gradient";
@@ -44,7 +43,10 @@ const ProperMessage = () => {
                 </View>
             </View>
             {timeStampShow
-                ? <Animatable.Text animation="slideInDown" duration={200} style={{ marginLeft: '20%', marginTop: 4 }}> <Text style={{ color: 'grey' }} >Hace 5 minutos</Text></Animatable.Text>
+                ?
+                <View style={{ alignSelf: 'flex-end', marginRight: '20%', marginTop: 4 }}>
+                    <Text style={{ color: 'grey' }} >Hace 5 minutos</Text>
+                </View>
                 : null
             }
         </View >
@@ -90,7 +92,10 @@ const AlienMessage = () => {
 
             </View>
             {timeStampShow
-                ? <Animatable.Text animation="slideInDown" duration={200} style={{ marginLeft: '20%', marginTop: 4 }}> <Text style={{ color: 'grey' }} >Hace 5 minutos</Text></Animatable.Text>
+                ?
+                <View style={{ marginLeft: '20%', marginTop: 4 }}>
+                    <Text style={{ color: 'grey' }} >Hace 5 minutos</Text>
+                </View>
                 : null
             }
         </View >
