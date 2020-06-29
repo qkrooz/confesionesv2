@@ -25,7 +25,16 @@ const MessagesStack = () => {
                 component={Chat}
                 name="chat"
                 options={{
-                    headerShown: false
+                    title: '@Flamita',
+                    headerStyle: {
+                        height: 60
+                    },
+                    headerTitleStyle: {
+                        paddingTop: 5,
+                    },
+                    headerLeftContainerStyle: {
+                        paddingTop: 10,
+                    },
                 }} />
         </Stack.Navigator>
     );
