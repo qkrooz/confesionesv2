@@ -9,7 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStack from './HomeStack';
 import NotificationsStack from './NotificationsStack';
 import MessagesStack from './MessagesStack';
-import User from '../_screens/User';
+import UserStack from './UserStack';
 // Other components
 import Icon from 'react-native-vector-icons/Feather';
 import Timebar from '../_components/TimeBar'
@@ -61,7 +61,7 @@ const TabNavigator = () => {
                     title: '',
                     tabBarIcon: ({ color }) => (<Icon name='message-circle' size={24} color={color} />)
                 }} />
-                <Tab.Screen name="user" component={User} options={{
+                <Tab.Screen name="user" component={UserStack} options={{
                     title: '',
                     tabBarIcon: ({ color }) => (<Icon name='user' size={24} color={color} />)
                 }} />

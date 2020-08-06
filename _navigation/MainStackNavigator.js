@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
 // Screens
 import NewPost from '../_screens/NewPost'
+
 const Stack = createStackNavigator();
 const MainStackNavigator = () => {
     return (
@@ -14,13 +15,18 @@ const MainStackNavigator = () => {
                 headerShown: false
             }} >
                 <Stack.Screen name="tabnavigator" component={TabNavigator} />
-                <Stack.Screen name="newpost" component={NewPost} mode='modal' style={styles.header} options={{
-                    headerShown: true, title: 'Nuevo Post', headerRight: () => (
-                        <TouchableHighlight>
-                            <Text style={styles.postButton}>PUBLICAR</Text>
-                        </TouchableHighlight>
-                    ),
-                }} />
+                <Stack.Screen
+                    name="newpost"
+                    component={NewPost}
+                    mode='modal'
+                    style={styles.header}
+                    options={{
+                        headerShown: true, title: 'Nuevo Post', headerRight: () => (
+                            <TouchableHighlight>
+                                <Text style={styles.postButton}>PUBLICAR</Text>
+                            </TouchableHighlight>
+                        ),
+                    }} />
             </Stack.Navigator>
         </NavigationContainer>
 
