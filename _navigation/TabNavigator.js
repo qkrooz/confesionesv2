@@ -82,6 +82,9 @@ const TabNavigator = ({route}) => {
         <Tab.Screen
           name="messages"
           component={MessagesStack}
+          initialParams={{
+            messagesModal: route.params.messagesModal,
+          }}
           options={{
             title: '',
             tabBarIcon: ({color}) => (

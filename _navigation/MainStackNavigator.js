@@ -19,10 +19,11 @@ const Stack = createStackNavigator();
 function MainStackNavigator() {
   const [postModalVisible, setpostmodalVisible] = useState(false);
   const [userModalVisible, setusermodalVisible] = useState(false);
+  const [messagesVisible, setmessagesmodalVisible] = useState(false);
+
   return (
     <>
       {/* POST MODAL */}
-
       <Modal
         animationType="slide"
         visible={postModalVisible}
@@ -62,7 +63,6 @@ function MainStackNavigator() {
           </View>
         </TouchableWithoutFeedback>
       </Modal>
-
       {/* USER MODAL */}
       <Modal
         animationType="slide"
@@ -119,6 +119,26 @@ function MainStackNavigator() {
           </View>
         </TouchableWithoutFeedback>
       </Modal>
+      {/* MESSAGES MODAL */}
+      <Modal animationType="slide" visible={messagesVisible} transparent={true}>
+        <TouchableWithoutFeedback
+          onPress={() => setmessagesmodalVisible(false)}>
+          <View style={styles.modalContainerOutter}>
+            <TouchableWithoutFeedback onPress={() => {}}>
+              <View style={styles.modalbuttonContainer}>
+                <TouchableWithoutFeedback>
+                  <View style={[styles.modalButton, {marginBottom: 15}]}>
+                    <Icon name="x" style={{marginRight: 10}} size={24} />
+                    <Text style={{fontSize: 18, fontWeight: '700'}}>
+                      Eliminar
+                    </Text>
+                  </View>
+                </TouchableWithoutFeedback>
+              </View>
+            </TouchableWithoutFeedback>
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="tabnavigator"
@@ -131,6 +151,7 @@ function MainStackNavigator() {
             initialParams={{
               postModal: () => setpostmodalVisible(!postModalVisible),
               userModal: () => setusermodalVisible(!userModalVisible),
+              messagesModal: () => setmessagesmodalVisible(!messagesVisible),
             }}
           />
           <Stack.Screen

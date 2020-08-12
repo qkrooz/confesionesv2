@@ -17,7 +17,7 @@ const NotificationStack = ({route}) => {
             height: 60,
           },
           headerTitleStyle: {
-            paddingTop: 16,
+            paddingTop: 5,
           },
         }}
       />
