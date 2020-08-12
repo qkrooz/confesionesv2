@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     accordion: {
         alignSelf: "center",
         paddingHorizontal: 10,
+        paddingBottom:15,
         backgroundColor: 'white',
         width: '85%',
         borderRadius: 24,
