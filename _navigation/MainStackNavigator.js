@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
+    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   modalbuttonContainer: {
     width: '100%',
@@ -202,14 +203,6 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderLeftColor: '#f2f2f2',
     borderLeftWidth: 1,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 6,
   },
   modalButton: {
     display: 'flex',
