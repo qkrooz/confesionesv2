@@ -17,6 +17,7 @@ const MessagesStack = ({route}) => {
         name="messages"
         options={{
           title: 'Mensajes',
+          headerLeft: null,
           headerStyle: {
             height: 60,
           },

@@ -15,6 +15,7 @@ function UserStack({route}) {
         name="user"
         options={{
           title: '@Flamita',
+          headerLeft: null,
           headerStyle: {
             height: 60,
           },

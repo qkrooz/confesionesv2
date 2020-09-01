@@ -13,6 +13,7 @@ const NotificationStack = ({route}) => {
         name="notifications"
         options={{
           title: 'Tus Publicaciones',
+          headerLeft: null,
           headerStyle: {
             height: 60,
           },

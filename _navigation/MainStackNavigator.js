@@ -13,6 +13,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
 // Screens
 import NewPost from '../_screens/NewPost';
+import Signup from '../_screens/Signup';
+import Signin from '../_screens/Signin';
+
 // Other
 import Icon from 'react-native-vector-icons/Feather';
 const Stack = createStackNavigator();
@@ -141,10 +144,12 @@ function MainStackNavigator() {
       </Modal>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="tabnavigator"
+          initialRouteName="signin"
           screenOptions={{
             headerShown: false,
           }}>
+          <Stack.Screen name="signin" component={Signin} />
+          <Stack.Screen name="login" component={Signup} />
           <Stack.Screen
             name="tabnavigator"
             component={TabNavigator}
