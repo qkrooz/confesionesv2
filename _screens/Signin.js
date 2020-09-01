@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   ScrollView,
@@ -9,9 +9,17 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-function Signin({navigation}) {
+function Signin({ navigation, data }) {
   const [email, setEmail] = useState('');
   const [psw, setPsw] = useState('');
+  console.log(data);
+  // if (data) {
+  //   setEmail(data.mail);
+  //   setPsw(data.psw);
+  //   console.log(email + psw);
+  // } else {
+  //   console.log(email + psw);
+  // }
   return (
     <ScrollView
       contentContainerStyle={{
