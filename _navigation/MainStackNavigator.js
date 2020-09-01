@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   TouchableHighlight,
   TouchableWithoutFeedback,
@@ -8,8 +8,8 @@ import {
   View,
 } from 'react-native';
 // React Navigation
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
 // Screens
 import NewPost from '../_screens/NewPost';
@@ -33,21 +33,21 @@ function MainStackNavigator() {
         transparent={true}>
         <TouchableWithoutFeedback onPress={() => setpostmodalVisible(false)}>
           <View style={styles.modalContainerOutter}>
-            <TouchableWithoutFeedback onPress={() => {}}>
+            <TouchableWithoutFeedback onPress={() => { }}>
               <View style={styles.modalbuttonContainer}>
                 <TouchableWithoutFeedback>
                   <View style={styles.modalButton}>
-                    <Icon name="share-2" style={{marginRight: 10}} size={24} />
-                    <Text style={{fontSize: 18, fontWeight: '700'}}>
+                    <Icon name="share-2" style={{ marginRight: 10 }} size={24} />
+                    <Text style={{ fontSize: 18, fontWeight: '700' }}>
                       Compartir
                     </Text>
                   </View>
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback>
-                  <View style={[styles.modalButton, {marginBottom: 15}]}>
+                  <View style={[styles.modalButton, { marginBottom: 15 }]}>
                     <Icon
                       name="flag"
-                      style={{marginRight: 10}}
+                      style={{ marginRight: 10 }}
                       size={24}
                       color="#ff2400"
                     />
@@ -73,16 +73,16 @@ function MainStackNavigator() {
         transparent={true}>
         <TouchableWithoutFeedback onPress={() => setusermodalVisible(false)}>
           <View style={styles.modalContainerOutter}>
-            <TouchableWithoutFeedback onPress={() => {}}>
+            <TouchableWithoutFeedback onPress={() => { }}>
               <View style={styles.modalbuttonContainer}>
                 <TouchableWithoutFeedback>
                   <View style={styles.modalButton}>
                     <Icon
                       name="alert-triangle"
-                      style={{marginRight: 10}}
+                      style={{ marginRight: 10 }}
                       size={24}
                     />
-                    <Text style={{fontSize: 18, fontWeight: '700'}}>
+                    <Text style={{ fontSize: 18, fontWeight: '700' }}>
                       Reportar un error
                     </Text>
                   </View>
@@ -91,19 +91,19 @@ function MainStackNavigator() {
                   <View style={styles.modalButton}>
                     <Icon
                       name="help-circle"
-                      style={{marginRight: 10}}
+                      style={{ marginRight: 10 }}
                       size={24}
                     />
-                    <Text style={{fontSize: 18, fontWeight: '700'}}>
+                    <Text style={{ fontSize: 18, fontWeight: '700' }}>
                       Sobre la app
                     </Text>
                   </View>
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback>
-                  <View style={[styles.modalButton, {marginBottom: 15}]}>
+                  <View style={[styles.modalButton, { marginBottom: 15 }]}>
                     <Icon
                       name="log-out"
-                      style={{marginRight: 10}}
+                      style={{ marginRight: 10 }}
                       size={24}
                       color="#ff2400"
                     />
@@ -127,12 +127,12 @@ function MainStackNavigator() {
         <TouchableWithoutFeedback
           onPress={() => setmessagesmodalVisible(false)}>
           <View style={styles.modalContainerOutter}>
-            <TouchableWithoutFeedback onPress={() => {}}>
+            <TouchableWithoutFeedback onPress={() => { }}>
               <View style={styles.modalbuttonContainer}>
                 <TouchableWithoutFeedback>
-                  <View style={[styles.modalButton, {marginBottom: 15}]}>
-                    <Icon name="x" style={{marginRight: 10}} size={24} />
-                    <Text style={{fontSize: 18, fontWeight: '700'}}>
+                  <View style={[styles.modalButton, { marginBottom: 15 }]}>
+                    <Icon name="x" style={{ marginRight: 10 }} size={24} />
+                    <Text style={{ fontSize: 18, fontWeight: '700' }}>
                       Eliminar
                     </Text>
                   </View>

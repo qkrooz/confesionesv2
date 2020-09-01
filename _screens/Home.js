@@ -1,8 +1,8 @@
 import React from 'react';
-import {ScrollView, View, StyleSheet} from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 // Components
 import Post from '../_components/Post';
-const Home = ({route}) => {
+const Home = ({ route }) => {
   return (
     <ScrollView>
       <View style={styles.mainContainer}>
