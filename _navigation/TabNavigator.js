@@ -1,5 +1,5 @@
 // React Import
-import React, { useEffect } from 'react';
+import React from 'react';
 // React native
 import { View } from 'react-native';
 // Ract Navigation Import
@@ -18,15 +18,7 @@ const modalFix = () => {
 };
 const TabNavigator = ({ navigation, route }) => {
   const Tab = createBottomTabNavigator();
-  console.log(route.params)
-  useEffect(
-    () =>
-      navigation.addListener('beforeRemove', (e) => {
-        // Prevent default behavior of leaving the screen
-        e.preventDefault();
-      }),
-    []
-  );
+  console.log(route.params);
   return (
     <>
       <Timebar />
