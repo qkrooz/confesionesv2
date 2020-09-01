@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   ScrollView,
@@ -10,6 +10,8 @@ import {
 import Icon from 'react-native-vector-icons/Feather';
 
 function Signin({navigation}) {
+  const [email, setEmail] = useState('');
+  const [psw, setPsw] = useState('');
   return (
     <ScrollView
       contentContainerStyle={{
@@ -25,6 +27,10 @@ function Signin({navigation}) {
             <TextInput
               style={styles.logField}
               placeholder="al123@alumnos.uacj.mx"
+              value={email}
+              onChangeText={text => {
+                setEmail(text);
+              }}
             />
           </View>
         </View>
@@ -32,7 +38,15 @@ function Signin({navigation}) {
           <Text style={styles.fieldLabel}>Contraseña</Text>
           <View style={styles.fieldContainer}>
             <Icon name="lock" style={styles.fieldIcon} size={24} />
-            <TextInput style={styles.logField} placeholder="************" />
+            <TextInput
+              secureTextEntry={true}
+              value={psw}
+              style={styles.logField}
+              placeholder="************"
+              onChangeText={text => {
+                setPsw(text);
+              }}
+            />
           </View>
         </View>
         <TouchableWithoutFeedback

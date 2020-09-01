@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   ScrollView,
@@ -10,6 +10,9 @@ import {
 import Icon from 'react-native-vector-icons/Feather';
 
 function Login({navigation}) {
+  const [newmail, setNewmail] = useState('');
+  const [newpsw, setNewpsw] = useState('');
+  const [confirmpsw, setConfirmpsw] = useState('');
   return (
     <ScrollView
       contentContainerStyle={{
@@ -23,8 +26,12 @@ function Login({navigation}) {
           <View style={styles.fieldContainer}>
             <Icon name="at-sign" style={styles.fieldIcon} size={24} />
             <TextInput
+              value={newmail}
               style={styles.logField}
               placeholder="al123@alumnos.uacj.mx"
+              onChangeText={text => {
+                setNewmail(newmail);
+              }}
             />
           </View>
         </View>
@@ -32,14 +39,28 @@ function Login({navigation}) {
           <Text style={styles.fieldLabel}>Contraseña</Text>
           <View style={styles.fieldContainer}>
             <Icon name="lock" style={styles.fieldIcon} size={24} />
-            <TextInput style={styles.logField} placeholder="************" />
+            <TextInput
+              value={newpsw}
+              style={styles.logField}
+              placeholder="************"
+              onChangeText={text => {
+                setNewpsw(text);
+              }}
+            />
           </View>
         </View>
         <View style={styles.inputGroup}>
           <Text style={styles.fieldLabel}>Confirma tu contraseña</Text>
           <View style={styles.fieldContainer}>
             <Icon name="lock" style={styles.fieldIcon} size={24} />
-            <TextInput style={styles.logField} placeholder="************" />
+            <TextInput
+              value={confirmpsw}
+              style={styles.logField}
+              placeholder="************"
+              onChangeText={text => {
+                setConfirmpsw(text);
+              }}
+            />
           </View>
         </View>
 
